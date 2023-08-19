@@ -29,7 +29,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 25px;
+    gap: 50px;
 }
 
 #main-content {
@@ -69,8 +69,83 @@
     row-gap: 10px;
 }
 
+#sidebar-logo {
+    width: 100%;
+    flex: 1;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: end;
+    padding: 0 1rem 5rem 1rem;
+    text-align: center;
+    
+}
+
 .header-div {
     border: solid;
+}
+
+#header-div-1 {
+    display: grid;
+    grid-template-columns: .5fr 5fr 1fr 1fr 1fr;
+    padding: 1rem;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-svg {
+    grid-column: 1 / 2;
+}
+
+#search {
+    grid-column: 2 / 3;
+    border-radius: 10px;
+    border: solid 1px gray;
+    min-height: 30px;
+    padding-left: .5rem;
+}
+
+#brand-name-btn {
+    grid-column: 3 / 4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#profile-picture-svg {
+    grid-column: 4 / 5;
+}
+
+#profile-btn {
+    grid-column: 5 / 6;
+}
+
+#header-div-2 {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+#profile-picture {
+    grid-column: 1 / 2;
+}
+
+#welcome-text {
+    grid-column: 2 / 3;
+}
+
+#new-score-btn {
+    grid-column: 3 / 4;
+}
+
+#standings-btn {
+    grid-column: 4 / 5;
+}
+
+#create-game-btn {
+    grid-column: 5 / 6;
 }
 
 #score-div {
@@ -103,13 +178,13 @@
 
 #scores {
     display: grid;
-    grid-template: repeat(auto-fit, 250px) / repeat(auto-fit, minmax(250px, 1fr));
+    grid-template: repeat(auto-fill, 250px) / repeat(auto-fit, minmax(250px, 1fr));
     flex:1;
     gap: 2rem;
     padding: 1rem 0;
     overflow: scroll;
     grid-auto-flow: row;
-    grid-auto-rows: 200px;
+    grid-auto-rows: 250px;
 }
 
 .score {
@@ -143,6 +218,7 @@
     grid-area: 6 / 1 / 7 / 6;
     display: grid;
     grid-template-columns: 4fr repeat(3, 1fr);
+    gap: 5px;
 }
 .score-edit {
     grid-column: 2 /3 ; 
@@ -159,7 +235,19 @@
     display: grid;
     grid-template-rows: repeat(3,1fr);
     transition: ease-in-out;
-    padding: 1rem 0;
+    gap: 10px;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.announcement-title {
+    font-size: .8rem;
+    grid-row: 1 / 2
+}
+
+.announcement-description {
+    font-size: .6rem;
+    grid-row: 2 / 3;
 }
 
 #score-leaders {
@@ -174,10 +262,34 @@
 .user {
     border: solid;
     max-height: 50px;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 3fr;
+    align-items: center;
+    padding: 0 .5rem;
+}
+
+.icon {
+    grid-area: 1 / 1 / 2 / 2;
+
+}
+
+.name {
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: .6rem;
+}
+
+.username {
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: .8rem;
 }
 
 .announcement {
-    border: solid;
+    max-height: 75px;
+    overflow: hidden;
+    padding: .25rem;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    gap: 5px
 }
 
 .main-content-p  {
