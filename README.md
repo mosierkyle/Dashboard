@@ -1,2 +1,3 @@
 # Dashboard
-CSS grid and flexbox practice 
+
+check it out https://mosierkyle.github.io/Dashboard/
